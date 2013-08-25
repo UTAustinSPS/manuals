@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{keyval}
+
+\makeatletter
+\define@key{cascading}{width}{\cascading@wd=#1}
+\define@key{cascading}{sep}{\def\cascading@sep{#1}}
+\newdimen\cascading@wd
+
+\newcommand{\cascadingblocks}[2][]{%
+  \setkeys{cascading}{sep=2ex,#1}%
+  \leavevmode\vbox{\offinterlineskip
+    \@for\next:=#2\do{%
+      \settowidth{\dimen@}{\next}%
+      \ifdim\dimen@>\cascading@wd
+        \cascading@wd=\dimen@
+      \fi
+    }%
+    \@for\next:=#2\do{%
+      \cascading@rule
+      \hbox{\fbox{\hb@xt@\cascading@wd{\hss\next\hss}}}%
+    }
+  }
+}
+\def\cascading@rule{%
+  \def\cascading@rule{%
+    \hb@xt@\dimexpr\cascading@wd+2\fboxsep+2\fboxrule\relax
+      {\hss\vrule\@height\cascading@sep\hss}%
+  }%
+}
+\makeatother
+
+\begin{document}
+% natural width, default sep
+
+\cascadingblocks[width=3cm,sep=3pt]{Your \texttt{.tex} file,asdf,asdf}
+
+
+\end{document}
