@@ -1,0 +1,13 @@
+*.log
+*.out
+*.aux
+*.idx
+*.bcf
+*.ilg
+*.ind
+*.synctex.gz
+*toc
+*.run.xml
+*.ptc
+*.bbl
+*.blg

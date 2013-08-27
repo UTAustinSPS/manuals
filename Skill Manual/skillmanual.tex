@@ -18,10 +18,10 @@
 % will need to run the following sequence of commands in the template
 % directory:
 %
-% 1) pdflatex main
-% 2) makeindex main.idx -s StyleInd.ist
-% 3) biber main
-% 4) pdflatex main
+% 1) pdflatex skillmanual
+% 2) makeindex skillmanual.idx -s StyleInd.ist
+% 3) biber skillmanual
+% 4) pdflatex skillmanual
 %
 % This template also uses a number of packages which may need to be
 % updated to the newest versions for the template to compile. It is strongly
@@ -145,6 +145,7 @@ Physics Skill Manual \par % Book title
 
 \pagestyle{fancy} % Print headers again
 
+\input{introduction}
 \input{typesetting}
 \input{erroranalysis}
 \input{comptools}
