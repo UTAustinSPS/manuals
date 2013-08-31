@@ -1,0 +1,64 @@
+%----------------------------------------------------------------------------------------
+% Computational tools for physics
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_1.pdf} % Chapter heading image
+
+\chapter{Mathematica, MATLAB, and Python}
+
+
+\section{Computational tools in physics}
+
+The next three chapters will be on the basic features of Mathematica, MATLAB and Python. These are three of the most common platforms broadly used for data analysis in physics. There certainly are other platforms that physicists use, but they are most often used in particular subfields (e.g. ROOT for high energy physics) even if they are broadly applicable. This chapter will serve as a guide to Mathematica, MATLAB, and Python because those platforms are available either in the PMCL and via student license (Mathematica and MATLAB) or can be downloaded for free (Python).
+
+
+
+\begin{center}
+{\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ |  p{1.5 cm}|| p{4 cm } | p{4 cm} || p{4 cm}|}
+   \hline
+	Feature &	\avantfont	{Mathematica} & \avantfont	{MATLAB} & \avantfont	{Python} \\ \hline \hline
+	Syntax & Designed to be user-friendly and `like english', but non-conventional and maybe awkward at first & Inflexible but robust and easy to use & More complicated (it's actually a programming language) but relatively straightforward. \\ \hline
+	Purpose & All-encompassing primarily symbolic platform for mathematical sciences & All-encompassing primarily numerical platform for experimental and engineering applications & A fast interpretted language with broad functionality and a relatively shallow learning curve. \\ \hline
+	Coverage & Covers most analysis techniques but is somewhat weak and the error messages can be difficult to interpret. & Without the toolboxes, it is only useful if you download scripts or are willing to write them yourself. With the toolboxes (\$\$), it is excellent. & Covers everything that you would want to do with data analysis, but requires an understanding of the language to use. \\ \hline
+	\end{tabular}		}
+\end{center} 
+
+\section{Learning these programs fast}
+
+The eternal rule of learning to use any technology is
+\begin{center}
+\begin{framed}
+\bf \Large{Learn to use the documentation}
+\end{framed}
+\end{center}
+Learning how to use the documentation in the program or device you are using is essential to making progress with it. Reading about the platform is often the only alternative to guessing. Unfortunately
+
+\begin{framed}
+\texttt{Sample0001.txt} is a plain text file of numbers that can be downloaded from the SPS website. The first column is time
+in some units. The rest of the columns have the x,y, and z components of the position of a few particles from a simulation. In this exercise you will preform various calculations, plots and analysis of this data. \\ 
+\begin{enumerate}
+\item Load the data from \texttt{Sample0001.txt} into a matrix
+\item Plot a few of the columns of data as a function of column 1 (the time).
+\item Compute the mean and standard deviation of all the columns after the
+first.
+\item Are the results for the x, y and z coordinates different? Are the results for
+the different particles different? Answer this question quantitatively.
+\item Make a histogram plot of columns 2 and 5. What is the connection between
+these plots and question 2?
+\item Make a parametric plot of columns 2 and 3 versus the time. The points in
+your plot should be connected by lines.
+\item Fit the plot from question (4) to a Gaussian function. Your can check your
+fit parameters since they should have an obvious connection to the results from
+(2). Is a Gaussian a good fitting function?
+\item Your time series plots from question 1 have some clear oscillations. Take
+the Fourier transform of this data and plot it.
+\item Suggest what physical situation the data is computed for.
+\item Do some other operation on the data of your choosing. For example, are
+there any correlations between the position coordinates for particles 1 and 2?
+\item Merit badge question: the parametric plot is messy because there are a
+lot of data points. Plot the data such that the first batch of points is one color,
+the next batch is another, etc. A half dozen colors should be enough: move across
+the spectrum, red to blue, as you plot the data.
+\end{enumerate}
+\end{framed}
